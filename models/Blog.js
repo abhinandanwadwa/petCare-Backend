@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = require('mongoose');
 
 const BlogSchema = new Schema({
-    username: {
+    title: {
         type: String,
         required: true
     },
@@ -10,7 +10,7 @@ const BlogSchema = new Schema({
         type: String,
         required: true
     },
-    password: {
+    username: {
         type: String,
         required: true
     },
