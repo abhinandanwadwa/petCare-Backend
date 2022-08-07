@@ -14,8 +14,8 @@ const JWT_SECRET = secret.JWT_SECRET;
 
 // Route 1: Creating A New Blog: POST: http://localhost:5000/api/blog/createblog. Login Required
 router.post('/createblog', fetchuser, [
-    body('title', "Title should be at least 50 characters.").isLength({ min: 50 }),
-    body('description', "Description Should Be At Least 150 Characters.").isLength({ min: 150 }),
+    body('title', "Title should be at least 50 characters.").isLength({ max: 50 }),
+    body('description', "Description Should Be At Least 150 Characters.").isLength({ max: 150 }),
 ], async (req, res) => {
     
     const errors = validationResult(req);
